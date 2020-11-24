@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VeterinaryApp</string>
+    <string name="chat">Chat</string>
+    <string name="call">Call</string>
+    <string name="office_timing">Office Hours:M-F 10:00 - 18:00</string>
+    <string name="message_within_work_hrs">Thank you for getting in touch with us. We’ll get back to you as soon as possible.</string>
+    <string name="message_outside_work_hrs">Work hours has ended. Please contact us again on the next work day.</string>
+    <string name="ok">OK</string>
+    <string name="office_hrs">Office Hours: %1$s</string>
+</resources>
