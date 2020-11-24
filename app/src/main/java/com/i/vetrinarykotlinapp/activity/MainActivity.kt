@@ -20,7 +20,6 @@ import com.i.vetrinarykotlinapp.viewModel.ConfigViewModel
 import com.i.vetrinarykotlinapp.viewModel.ConfigViewModelFactory
 import kotlin.collections.ArrayList
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var btnChat: Button
@@ -30,19 +29,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var petListDetails: RecyclerView
     private lateinit var webRepository: WebRepository
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         init()
     }
-
     private fun init() {
         btnChat = findViewById(R.id.btn_chat)
         btnCall = findViewById(R.id.btn_call)
         textViewWorkingHours = findViewById(R.id.textView_officeHrs)
         petListDetails = findViewById(R.id.recyclerView)
         this.webRepository = WebRepository()
+
         configViewModel = ViewModelProvider(
             this,
             ConfigViewModelFactory(webRepository)
@@ -56,10 +54,7 @@ class MainActivity : AppCompatActivity() {
         }
         setConfigDetails()
         setPetDetails()
-
-
     }
-
     /**
      * In this method gets the messages to user after call and chat button is clicked.
      */
@@ -115,4 +110,3 @@ class MainActivity : AppCompatActivity() {
         })
     }
 }
-

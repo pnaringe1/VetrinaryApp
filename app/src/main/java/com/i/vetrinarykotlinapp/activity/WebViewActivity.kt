@@ -13,25 +13,22 @@ import com.i.vetrinarykotlinapp.R
  */
 class WebViewActivity : AppCompatActivity() {
 
-    private lateinit var wv1: WebView
+    private lateinit var webView: WebView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webview)
 
-        wv1 = findViewById(R.id.webview)
-        wv1.webViewClient = MyBrowser()
+        webView = findViewById(R.id.webview)
+        webView.webViewClient = MyBrowser()
         val url: String? = intent.getStringExtra(Constants.CONTENT_URL)
 
-
-        wv1.settings.loadsImagesAutomatically = true
-        wv1.settings.javaScriptEnabled = true
-        wv1.scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
+        webView.settings.loadsImagesAutomatically = true
+        webView.settings.javaScriptEnabled = true
+        webView.scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
         if (url != null) {
-            wv1.loadUrl(url)
+            webView.loadUrl(url)
         }
     }
-
-
     private class MyBrowser : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
             view.loadUrl(url)

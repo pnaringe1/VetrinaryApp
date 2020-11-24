@@ -16,7 +16,6 @@ class PetAdapter(
 ) : RecyclerView.Adapter<PetAdapter.MyViewHolder>() {
     private var arrayListDetails: ArrayList<Pet> = petList
 
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -32,20 +31,15 @@ class PetAdapter(
         holder.bind(item)
         holder.itemView.setOnClickListener { listener(item) }
     }
-
     override fun getItemCount(): Int {
         return arrayListDetails.size
     }
-
     class MyViewHolder(itemView: View) : ViewHolder(itemView) {
         private var title: TextView = itemView.findViewById(R.id.textView_pet)
         private var imgPet: ImageView = itemView.findViewById(R.id.img_pet)
         fun bind(item: Pet) {
             title.text = item.title
             Util.displayImage(item.imgUrl, imgPet)
-
         }
-
     }
-
 }

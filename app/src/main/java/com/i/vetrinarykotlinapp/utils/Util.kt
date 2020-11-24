@@ -23,7 +23,6 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 object Util {
-
     private var imageCache: LruCache<String, Bitmap>
     private var executorService: ExecutorService =
         Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())
@@ -39,7 +38,6 @@ object Util {
             }
         }
     }
-
     /**
      * This method is to display Image from imageUrl in imageView
      */
@@ -52,7 +50,6 @@ object Util {
             )
             return
         }
-
         imageView.tag = url
         executorService.submit {
             val bitmap: Bitmap? =
@@ -68,13 +65,11 @@ object Util {
             }
         }
     }
-
     private fun updateImageView(imageView: ImageView, bitmap: Bitmap) {
         uiHandler.post {
             imageView.setImageBitmap(bitmap)
         }
     }
-
     private fun downloadImage(mainUrl: String): Bitmap? {
         var bitmap: Bitmap? = null
         try {
@@ -88,7 +83,6 @@ object Util {
 
         return bitmap
     }
-
     /**
      * This method gives Alert Message with OK button
      */
@@ -100,7 +94,6 @@ object Util {
         ) { dialog, which -> dialog.dismiss() }
         dialog.show()
     }
-
     /**
      * This method is to match the current time with working time
      */
@@ -117,10 +110,8 @@ object Util {
                 }
             }
         }
-
         return false
     }
-
     /**
      * This Method is compare start time and end time
      */
@@ -142,7 +133,6 @@ object Util {
         return false
 
     }
-
     /**
      * This method is to check current date is weekend or not
      */
@@ -152,6 +142,4 @@ object Util {
         val day: DayOfWeek = DayOfWeek.of(date.get(ChronoField.DAY_OF_WEEK))
         return day == DayOfWeek.SATURDAY || day == DayOfWeek.SUNDAY
     }
-
-
 }

@@ -9,10 +9,6 @@ import com.i.vetrinarykotlinapp.model.Pet
 
 
 class ConfigViewModel(webRepository: WebRepository) : ViewModel() {
-
-
     var pets: MutableLiveData<Resource<List<Pet>>>? = webRepository.getPetUrl()
-
     var configs: MutableLiveData<Resource<List<Config>>>? = webRepository.getConfigUrl()
-
 }
