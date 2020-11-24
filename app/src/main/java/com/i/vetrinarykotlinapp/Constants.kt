@@ -3,9 +3,9 @@ package com.i.vetrinarykotlinapp
 class Constants {
     companion object {
         const val PET_URL =
-            "https://raw.githubusercontent.com/pnaringe1/VeterinaryApp/main/app/src/main/res/raw/pets.json"
+            "https://raw.githubusercontent.com/pnaringe1/VetrinaryApp/main/app/src/main/res/raw/pets.json"
         const val CONFIG_URL =
-            "https://raw.githubusercontent.com/pnaringe1/VeterinaryApp/main/app/src/main/res/raw/config.json"
+            "https://raw.githubusercontent.com/pnaringe1/VetrinaryApp/main/app/src/main/res/raw/config.json"
         const val SETTINGS = "settings"
         const val WORK_HOURS = "workHours"
         const val IS_CHAT_ENABLED = "isChatEnabled"
