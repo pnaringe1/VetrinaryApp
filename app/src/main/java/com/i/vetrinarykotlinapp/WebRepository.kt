@@ -10,8 +10,6 @@ import org.json.JSONObject
 import java.io.IOException
 
 class WebRepository(private val client: OkHttpClient) : GetData {
-   // private val client: OkHttpClient = Injection.okHttpClient
-
     /**
      * Fetch the Settings from CONFIG_URL using OkHttpClient
      * Get the data from Json.
