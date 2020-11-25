@@ -155,12 +155,10 @@ object Util {
     fun visibilityGone(textViewWorkingHours: TextView, textViewErrorMessage: TextView) {
         textViewWorkingHours.visibility = View.GONE
         textViewErrorMessage.visibility = View.VISIBLE
-
     }
 
     fun visibility(textViewWorkingHours: TextView, textViewErrorMessage: TextView) {
         textViewWorkingHours.visibility = View.VISIBLE
         textViewErrorMessage.visibility = View.GONE
-
     }
 }

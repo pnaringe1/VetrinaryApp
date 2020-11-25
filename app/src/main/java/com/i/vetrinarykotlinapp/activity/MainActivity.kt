@@ -119,10 +119,7 @@ class MainActivity : AppCompatActivity() {
                 petListDetails.adapter = adapter
             } else {
                 Util.visibilityGone(textViewWorkingHours, textViewErrorMessage)
-
-
             }
         })
-
     }
 }
