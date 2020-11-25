@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.i.vetrinarykotlinapp.Constants
+import com.i.vetrinarykotlinapp.Injection
 import com.i.vetrinarykotlinapp.R
 import com.i.vetrinarykotlinapp.WebRepository
 import com.i.vetrinarykotlinapp.utils.Util
@@ -34,12 +35,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         init()
     }
+
     private fun init() {
         btnChat = findViewById(R.id.btn_chat)
         btnCall = findViewById(R.id.btn_call)
         textViewWorkingHours = findViewById(R.id.textView_officeHrs)
         petListDetails = findViewById(R.id.recyclerView)
-        this.webRepository = WebRepository()
+        this.webRepository = WebRepository(Injection.okHttpClient)
 
         configViewModel = ViewModelProvider(
             this,
@@ -55,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         setConfigDetails()
         setPetDetails()
     }
+
     /**
      * In this method gets the messages to user after call and chat button is clicked.
      */
